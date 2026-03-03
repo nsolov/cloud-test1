@@ -11,8 +11,8 @@ jobs:
   deploy:
     uses: intersystems-community/cloud-deployment/.github/workflows/deployment.yml@main
     with:
-      name: ns-test-2
-      dev: true
+      name: ns-prod-test
+      # dev: true
       ## Optional
       memory: 1Gi
       # port: 8081

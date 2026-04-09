@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>IRIS deploy variables demo</title>
+</head>
+<body>
+  <script language="cache" runat="server">
+    set var1 = $SYSTEM.Util.GetEnviron("var1")
+    set var2 = $SYSTEM.Util.GetEnviron("var2")
+
+    if var1="" set var1 = "(var1 is not set)"
+
+    if var2="" set var2 = "(var2 is not set)"
+  </script>
+
+  <h1>Variables from deploy.yml inside IRIS</h1>
+  <p>This CSP page reads values from the IRIS process environment.</p>
+
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Name</th>
+      <th>Value inside IRIS</th>
+    </tr>
+    <tr>
+      <td>var1</td>
+      <td><strong>#(var1)#</strong></td>
+    </tr>
+    <tr>
+      <td>var2</td>
+      <td><strong>#(var2)#</strong></td>
+    </tr>
+  </table>
+</body>
+</html>

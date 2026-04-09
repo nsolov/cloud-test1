@@ -13,7 +13,7 @@ XData setup
       <Database Name="${Namespace}-DATA" Dir="${mgrdir}${database}/data" Create="yes" Resource="%DB_${Namespace}-DATA"/>
       <Database Name="${Namespace}-CODE" Dir="${mgrdir}${database}/code" Create="yes" Resource="%DB_${Namespace}-CODE"/>
     </Configuration>
-    <CSPApplication Url="/testweb" Directory="/home/irisowner/web/" ServeFiles="1" Recurse="1" AuthenticationMethods="64" />
+    <CSPApplication Url="/testweb" Directory="/home/irisowner/web/" ServeFiles="1" Recurse="1" AuthenticationMethods="64" MatchRoles=":%ALL" />
     <CSPApplication Url="/myapi" DispatchClass="Sandbox.Cloudsample.REST" AuthenticationMethods="64" MatchRoles=":%ALL" />
   </Namespace>
 </Manifest>

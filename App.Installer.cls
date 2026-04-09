@@ -14,6 +14,7 @@ XData setup
       <Database Name="${Namespace}-CODE" Dir="${mgrdir}${database}/code" Create="yes" Resource="%DB_${Namespace}-CODE"/>
     </Configuration>
     <CSPApplication Url="/testweb" Directory="/home/irisowner/web/" ServeFiles="1" Recurse="1" AuthenticationMethods="64" />
+    <CSPApplication Url="/myapi" DispatchClass="Sandbox.Cloudsample.REST" AuthenticationMethods="64" MatchRoles=":%ALL" />
   </Namespace>
 </Manifest>
 }

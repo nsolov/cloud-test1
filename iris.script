@@ -1,3 +1,6 @@
+    zn "USER"
+    zpm "install webterminal" 
+    
     zn "%SYS"
 
     // create IRISAPP namespace

@@ -14,4 +14,23 @@ ClassMethod HelloWorld(name As %String = "") As %Status
     return $$$OK
 }
 
+ClassMethod ShowVars() As %Status
+{
+    set var1 = $SYSTEM.Util.GetEnviron("var1")
+    set var2 = $SYSTEM.Util.GetEnviron("var2")
+    
+    
+    if (var1="") {
+        set var1 = "(var1 is not set)"
+    }
+    if (var2="") {
+        set var2 = "(var2 is not set)"
+    }
+    
+    write "var1 = " _ var1
+    write "var2 = " _ var2
+    
+    
+}
+
 }

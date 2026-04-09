@@ -30,7 +30,7 @@ ClassMethod ShowVars() As %Status
     write "var1 = " _ var1
     write "var2 = " _ var2
     
-    
+    q 1
 }
 
 }
